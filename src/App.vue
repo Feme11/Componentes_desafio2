@@ -28,8 +28,8 @@ export default {
       this.lista_tareas.push(this.tarea),
       this.tarea = ''
     },
-    descartar(tarea){
-      this.lista_tareas.splice(tarea, 1)
+    descartar(index){
+      this.lista_tareas.splice(index, 1)
     }
   },
 }

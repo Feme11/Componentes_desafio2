@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <li v-for="tarea in lista_tareas" :key="tarea">{{tarea}} <button @click="descartar(tarea)">Eliminar tarea</button> </li>
+      <li v-for="(tarea, index) in lista_tareas" :key="index">{{tarea}} <button @click="descartar(index)">Eliminar tarea</button> </li>
     </ul>   
   </div>
 </template>
@@ -15,8 +15,8 @@ export default {
   },
   
   methods:{
-     descartar(tarea){
-      this.$emit("descartar", tarea)
+     descartar(index){
+      this.$emit("descartar", index)
     }
   }
   
